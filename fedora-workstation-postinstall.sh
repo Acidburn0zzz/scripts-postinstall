@@ -3,15 +3,15 @@
 ######## Variables ##############
 # enforcing/permissive/disabled : Statut de SELinux à activer
 selinux=enforcing
-# 0/1 : Si on veut activer ssh		
+# 0/1 : Si on veut activer ssh
 enablessh=1
-# Liste de logiciels additionnels à installer	
+# Liste de logiciels additionnels à installer
 addsoftwares="nmon htop"
 # 0/1 : Si on veut installer les codecs
 codecs=1
 # 0/1 : Si on veut installer les extensions GNOME dash-to-dock, appindicator et gsconnect
 gnomeextensions=1
-# 0/1 : Si on veut supprimer gnome-software et packagekit		
+# 0/1 : Si on veut supprimer gnome-software et packagekit
 removepackagekit=1
 # 0/1 : Si on veut supprimer les logiciels annexes de GNOME (Avoir un gnome light)
 removeextragnome=1
@@ -22,17 +22,17 @@ removeabrtd=1
 # 0/1 : Si on veut supprimer libvirt installé par défaut
 removelibvirt=1
 # 0/1 : Si on veut installer NVidia Proprio (Optimus supporté)
-# /!\ SecureBoot doit être désactivé pour cette option	
+# /!\ SecureBoot doit être désactivé pour cette option
 nvidiaproprio=0 
 # 0/1 : Si on veut installer les pilotes Wi-Fi Broadcom
-# /!\ SecureBoot doit être désactivé		
+# /!\ SecureBoot doit être désactivé
 broadcomwifi=0
-# 0/1 : Si on veut installer VirtualBox		
+# 0/1 : Si on veut installer VirtualBox
 virtualbox=0
-# 0/1 : Si on veut installer Steam		
+# 0/1 : Si on veut installer Steam
 steam=0 
 # 0/1 : Si on veut remplacer Firefox par Vivaldi
-vivaldi=1 			
+vivaldi=1
 ######## FIN Variables ##########
 
 
@@ -67,6 +67,7 @@ fi
 
 # MàJ
 dnf -y --nogpgcheck --refresh upgrade
+dnf -y --nogpgcheck install gnome-tweaks
 
 # RPM Fusion
 dnf install --nogpgcheck -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
