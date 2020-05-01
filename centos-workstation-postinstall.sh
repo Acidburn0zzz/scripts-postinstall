@@ -67,6 +67,7 @@ fi
 if [[ "$centos" -eq "8" ]]
 then
 	dnf -y --nogpgcheck --refresh upgrade
+	dnf -y --nogpgcheck install gnome-tweaks
 fi
 
 # Dépôts
