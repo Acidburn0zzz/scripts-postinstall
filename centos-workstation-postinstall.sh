@@ -131,7 +131,7 @@ if [[ "$centos" -eq "8" ]]
 then
 	if [[ "$codecs" -eq "1" ]]
 	then
-		dnf install --nogpgcheck -y gstreamer-ffmpeg gstreamer-plugins-bad gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer1-plugins-{base,good,bad-free,good-extras,bad-free-extras} gstreamer1-plugin-mpg123 gstreamer1-libav gstreamer1-plugins-{bad-freeworld,ugly}
+		dnf install --nogpgcheck -y gstreamer1-plugins-{base,good,bad-free,ugly-free} gstreamer1-libav gstreamer1-plugins-{bad-freeworld,ugly}
 	fi
 fi
 
