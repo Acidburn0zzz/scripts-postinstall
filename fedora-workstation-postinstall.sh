@@ -137,7 +137,7 @@ then
 fi
 
 #VirtualBox
-if [[ "$steam" -eq "1" ]]
+if [[ "$virtualbox" -eq "1" ]]
 then
 	dnf install --nogpgcheck -y VirtualBox
 	akmods
@@ -169,6 +169,7 @@ then
 		/opt/vivaldi/update-widevine
 		dnf autoremove -y firefox
 
+		#TODO awk -F: '$3 >= 1000 AND $3 <= 2000 {print $1}' /etc/passwd
 		gsettings set org.gnome.shell  favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed -e 's/firefox.desktop/vivaldi-stable.desktop/')"
 	fi
 fi

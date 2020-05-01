@@ -8,7 +8,7 @@ cockpit=1
 # 0/1 : Désactiver le parefeu firewalld
 disablefirewalld=0
 # Liste de logiciels additionnels à installer	
-addsoftwares="nmon htop vim"
+addsoftwares="nmon htop vim screen"
 ######## FIN Variables ##########
 
 
