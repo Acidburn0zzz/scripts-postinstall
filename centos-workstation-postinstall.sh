@@ -123,7 +123,7 @@ then
 	if [[ "$disablefirewalld" -eq "1" ]]
 	then
 		systemctl stop firewalld
-		systemctl disable wirewalld
+		systemctl disable firewalld
 	fi
 fi
 
